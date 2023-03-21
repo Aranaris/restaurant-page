@@ -6,17 +6,26 @@ const pageLoad = () => {
 
     let navigation = document.createElement('div');
     navigation.className = 'nav-bar';
-    navigation.textContent = 'Home Menu Contact'
 
-    let restaurantImage = document.createElement('div');
-    restaurantImage.className = 'restaurant-image';
-    restaurantImage.textContent = 'Image placeholder';
+    let homeButton = document.createElement('button');
+    homeButton.id = 'home-button';
+    homeButton.textContent = 'Home';
 
-    let restaurantInfo = document.createElement('div');
-    restaurantInfo.className = 'restaurant-info';
-    restaurantInfo.textContent = 'This is some information about our kolaches';
+    let menuButton = document.createElement('button');
+    menuButton.id = 'menu-button';
+    menuButton.textContent = 'Menu';
 
-    content.append(headline, navigation,restaurantImage, restaurantInfo);
+    let contactButton = document.createElement('button');
+    contactButton.id = 'contact-button';
+    contactButton.textContent = 'Contact';
+
+    navigation.append(homeButton, menuButton, contactButton);
+
+    let tabContent = document.createElement('div');
+    tabContent.id = 'tab-content';
+    tabContent.textContent = 'Nothing here';
+
+    content.append(headline, navigation, tabContent);
 };
 
 export default pageLoad;
